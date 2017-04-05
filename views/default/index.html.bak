@@ -1,0 +1,69 @@
+{{extend 'layout.html'}}
+
+    <h1>QuickMeet</h1>
+
+
+
+    <!-- Lists days over grid-->
+
+  <link rel="stylesheet" href="{{=URL('static','css/calendar.css')}}">
+  <link rel="stylesheet" href="{{=URL('static','css/switch.css')}}">
+    <table class="header">
+      <tr>
+        <td></td>
+        <td>Sunday</td>
+        <td>Monday</td>
+        <td>Tuesday</td>
+        <td>Wednesday</td>
+        <td>Thursday</td>
+        <td>Friday</td>
+        <td>Saturday</td>
+      </tr>
+    </table>
+
+
+    <canvas id="myCanvas" width="800" height="400">
+    Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script src ="{{=URL('static','js/CalendarGenerator.js')}}">
+    </script>
+  
+    <script src = "{{=URL('static','js/CoordinateTracker.js')}}">
+    </script>
+
+    <script src ="{{=URL('static','js/BoxGenerator.js')}}">
+    </script>
+    
+    <script src ="{{=URL('static','js/Undo.js')}}">
+    </script>
+
+
+
+
+
+
+<table class ="header">
+    <tr>
+        <td>
+            <form>
+            <font size="4">username:</font>
+            <input type="text" name="username" value="">
+            <input type="submit" value="Submit">
+            <input type="button" value="Create Group" onClick = "group()" />
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="deleteswitch">
+            <label class="onoffswitch-label" for="deleteswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span></label>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<br><br><br>
